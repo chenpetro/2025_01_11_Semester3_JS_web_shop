@@ -148,13 +148,14 @@ buttonsPurchase.forEach(function(element){
         if (balanceJs > price) {
             balanceJs-=price
             balanceHtml.textContent = `${balanceJs}UAH`
+            element.parentElement.style.background = "green"
             alert ('Thx for the purchase')
         } else{
             alert ('You have not enough money ')
         }
     })
-    
-})
+
+})  
 
 searchBtn.addEventListener('click', ()=>{
     const searchData = search.value
@@ -175,3 +176,4 @@ searchBtn.addEventListener('click', ()=>{
     `
     
 })
+
